@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>スクール説明動画 | BONA BONA SCHOOL</title>
+<meta property="og:title" content="スクール説明動画 | BONA BONA SCHOOL">
+<meta property="og:description" content="面長改善コルギ・天使の羽コルギ専門スクールの説明動画（約20分）">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Noto+Serif+JP:wght@200;300;400;500;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#D4A0A0;--pink-light:#E8C5C5;--pink-pale:#F5E6E6;--pink-deep:#B87878;--beige:#F0E6DC;--beige-light:#F7F0EA;--cream:#FBF8F5;--white:#FFFFFF;--text-dark:#3D2E2E;--text-medium:#6B5555;--text-light:#9A8585;--line:#E0D0D0}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans JP',sans-serif;font-weight:300;color:var(--text-dark);background:var(--cream);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+@keyframes fadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+.ani{opacity:0}.ani.vis{animation:fadeUp .8s ease forwards}
+.ani.d1.vis{animation-delay:.1s}.ani.d2.vis{animation-delay:.2s}.ani.d3.vis{animation-delay:.3s}.ani.d4.vis{animation-delay:.4s}
+
+/* ===== NAV ===== */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(251,248,245,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(212,160,160,.15)}
+.nav-inner{max-width:1000px;margin:0 auto;display:flex;justify-content:center;align-items:center;padding:12px 24px}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:18px;letter-spacing:4px;color:var(--text-dark);text-decoration:none;text-align:center}
+.nav-logo span{font-size:10px;letter-spacing:3px;color:var(--text-light);display:block;margin-top:2px}
+
+/* ===== HERO ===== */
+.hero{width:100%;padding:130px 24px 56px;text-align:center;background:linear-gradient(175deg,var(--cream) 0%,var(--pink-pale) 60%,var(--pink-light) 100%)}
+.hero-badge{display:inline-block;padding:7px 26px;border:1px solid rgba(61,46,46,.25);color:var(--text-dark);font-size:10px;letter-spacing:3px;margin-bottom:32px;animation:fadeIn 1s ease .2s forwards;opacity:0}
+.hero-lead{font-family:'Noto Serif JP',serif;font-weight:300;font-size:clamp(13px,2.2vw,15px);color:var(--text-medium);letter-spacing:2px;line-height:2.2;margin-bottom:24px;animation:fadeUp 1s ease .4s forwards;opacity:0}
+.hero-title{font-family:'Noto Serif JP',serif;font-weight:400;font-size:clamp(20px,4.2vw,30px);letter-spacing:4px;line-height:1.9;color:var(--text-dark);margin-bottom:20px;animation:fadeUp 1s ease .6s forwards;opacity:0}
+.hero-meta{font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:4px;color:var(--text-light);animation:fadeUp 1s ease .8s forwards;opacity:0}
+
+/* ===== VIDEO ===== */
+.video-sec{width:100%;padding:56px 24px 64px;background:var(--white)}
+.video-wrap{max-width:900px;margin:0 auto}
+.video-frame{position:relative;width:100%;aspect-ratio:16/9;background:#000;border-radius:12px;overflow:hidden;box-shadow:0 16px 48px rgba(61,46,46,.14)}
+.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-note{margin-top:20px;font-size:12px;line-height:2;color:var(--text-light);letter-spacing:1px;text-align:center}
+
+/* ===== SECTIONS ===== */
+.sec{width:100%;padding:72px 24px;text-align:center}
+.sec-label{font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:5px;color:var(--pink);margin-bottom:12px}
+.sec-title{font-family:'Noto Serif JP',serif;font-weight:400;font-size:clamp(19px,3.6vw,26px);letter-spacing:3px;line-height:1.9;color:var(--text-dark);margin-bottom:8px}
+.sec-line{width:50px;height:1px;background:var(--pink);margin:24px auto 40px}
+.bg-cream{background:var(--cream)}.bg-beige{background:var(--beige-light)}.bg-white{background:var(--white)}
+.bg-pink{background:linear-gradient(180deg,var(--pink-pale) 0%,var(--cream) 100%)}
+
+/* ===== CHAPTERS ===== */
+.chapters{max-width:640px;margin:0 auto;text-align:left}
+.chapter{display:flex;gap:22px;padding:26px 0;border-bottom:1px solid var(--line)}
+.chapter:last-child{border-bottom:none}
+.chapter-num{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:34px;color:var(--pink-light);line-height:1;flex-shrink:0;width:44px}
+.chapter-body{flex:1;min-width:0}
+.chapter-title{font-family:'Noto Serif JP',serif;font-weight:400;font-size:16px;letter-spacing:2px;color:var(--text-dark);margin-bottom:10px;line-height:1.7}
+.chapter-text{font-size:13.5px;line-height:2.1;color:var(--text-medium);letter-spacing:.5px}
+@media(max-width:767px){.chapter{gap:16px}.chapter-num{font-size:28px;width:34px}.chapter-title{font-size:14.5px;letter-spacing:1px}.chapter-text{font-size:13px}}
+
+/* ===== CTA ===== */
+.cta-box{max-width:640px;margin:0 auto;padding:48px 36px;background:var(--white);border:1px solid var(--line);border-radius:4px}
+.cta-lead{font-family:'Noto Serif JP',serif;font-weight:300;font-size:clamp(14px,2.4vw,16px);line-height:2.4;color:var(--text-dark);letter-spacing:1.5px;margin-bottom:36px}
+.cta-lead .em{color:var(--pink-deep);font-weight:400}
+.btn-main{display:inline-flex;align-items:center;gap:12px;padding:20px 44px;background:var(--pink);color:var(--white);font-family:'Noto Serif JP',serif;font-weight:400;font-size:14px;letter-spacing:3px;text-decoration:none;border:none;cursor:pointer;transition:all .4s ease;border-radius:50px}
+.btn-main:hover{background:var(--pink-deep);transform:translateY(-2px);box-shadow:0 12px 36px rgba(184,120,120,.3)}
+.line-icon{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;background:#06C755;border-radius:6px;flex-shrink:0;box-shadow:0 2px 8px rgba(6,199,85,.35)}
+.line-icon svg{width:18px;height:18px}
+.cta-sub{margin-top:24px;font-size:12px;line-height:2;color:var(--text-light);letter-spacing:1px}
+.cta-fallback{margin-top:14px;font-size:11px;letter-spacing:1px}
+.cta-fallback a{color:var(--text-light);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px;transition:color .3s}
+.cta-fallback a:hover{color:var(--pink-deep)}
+@media(max-width:767px){.cta-box{padding:36px 22px}.btn-main{padding:18px 30px;font-size:13px;letter-spacing:2px}}
+
+/* ===== STEPS ===== */
+.steps{max-width:680px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.step{padding:32px 18px;background:var(--white);border:1px solid var(--line);text-align:center}
+.step-num{font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:3px;color:var(--pink);margin-bottom:14px}
+.step-title{font-family:'Noto Serif JP',serif;font-weight:400;font-size:14px;letter-spacing:1px;color:var(--text-dark);line-height:1.9;margin-bottom:10px}
+.step-text{font-size:12px;line-height:1.9;color:var(--text-medium)}
+@media(max-width:767px){.steps{grid-template-columns:1fr;gap:12px}.step{padding:24px 20px}}
+
+/* ===== TALK POINTS ===== */
+.points{max-width:520px;margin:0 auto;text-align:left}
+.point{display:flex;align-items:flex-start;gap:14px;padding:18px 0;border-bottom:1px solid var(--line);font-family:'Noto Serif JP',serif;font-weight:300;font-size:14.5px;color:var(--text-dark);letter-spacing:1px;line-height:1.9}
+.point:last-child{border-bottom:none}
+.point-check{color:var(--pink);flex-shrink:0;font-size:15px;line-height:1.9}
+@media(max-width:767px){.point{font-size:13px;gap:11px}}
+
+/* ===== INSTRUCTOR ===== */
+.circle-img{width:150px;height:150px;border-radius:50%;overflow:hidden;margin:0 auto 26px;background:linear-gradient(135deg,var(--pink-light),var(--beige))}
+.circle-img img{width:100%;height:100%;object-fit:cover;display:block}
+.instructor-name{font-family:'Cormorant Garamond',serif;font-size:26px;letter-spacing:5px;color:var(--text-dark);margin-bottom:6px}
+.instructor-role{font-size:11px;letter-spacing:2px;color:var(--text-light);margin-bottom:26px}
+.instructor-bio{max-width:520px;margin:0 auto;font-family:'Noto Serif JP',serif;font-weight:300;font-size:13.5px;line-height:2.3;color:var(--text-medium);letter-spacing:.5px}
+
+/* ===== FOOTER ===== */
+.footer{padding:56px 24px 100px;text-align:center;background:var(--text-dark);color:var(--white)}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:18px;letter-spacing:5px;margin-bottom:8px}
+.footer-logo span{display:block;font-size:10px;letter-spacing:3px;color:rgba(255,255,255,.5);margin-top:6px}
+.footer-link{display:inline-block;margin-top:26px;font-size:12px;letter-spacing:1.5px;color:rgba(255,255,255,.75);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.3);padding-bottom:3px;transition:color .3s}
+.footer-link:hover{color:var(--white)}
+.footer-copy{margin-top:32px;font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:2px;color:rgba(255,255,255,.4)}
+
+/* ===== FLOATING CTA ===== */
+.floating-cta{position:fixed;bottom:24px;right:24px;z-index:99;animation:pulse 2.5s ease infinite}
+.floating-cta a{display:flex;align-items:center;justify-content:center;gap:10px;padding:16px 30px;background:var(--pink-deep);color:var(--white);font-family:'Noto Serif JP',serif;font-size:13px;letter-spacing:2px;text-decoration:none;border-radius:50px;box-shadow:0 8px 32px rgba(184,120,120,.4);transition:all .3s;white-space:nowrap}
+.floating-cta a:hover{background:var(--text-dark)}
+.floating-cta .line-icon{width:22px;height:22px}
+.floating-cta .line-icon svg{width:15px;height:15px}
+@media(max-width:767px){
+  body{padding-bottom:80px}
+  .footer{padding-bottom:56px}
+  .floating-cta{bottom:14px;right:14px;left:14px;animation:none}
+  .floating-cta a{padding:15px 20px;font-size:13px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="https://korugi-school.jp/" class="nav-logo">BONA BONA<span>SCHOOL</span></a>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <div class="hero-badge">限定公開ページ</div>
+  <p class="hero-lead">公式LINEにご登録いただいた方へ</p>
+  <h1 class="hero-title">面長改善 × 天使の羽コルギ<br>スクール説明動画</h1>
+  <p class="hero-meta">ABOUT 20 MIN</p>
+</header>
+
+<!-- ===== VIDEO ===== -->
+<section class="video-sec">
+  <div class="video-wrap">
+    <div class="video-frame">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/fuiqhR6Ieh0?rel=0&modestbranding=1&playsinline=1"
+        title="面長改善×天使の羽コルギスクール 説明動画"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+    <p class="video-note">音が出ます。イヤホンまたは音量にご注意ください。<br>途中で止めても、同じページからいつでも続きをご覧いただけます。</p>
+  </div>
+</section>
+
+<!-- ===== CHAPTERS ===== -->
+<section class="sec bg-cream">
+  <div class="sec-label">CONTENTS</div>
+  <h2 class="sec-title">この動画でお伝えしていること</h2>
+  <div class="sec-line"></div>
+  <div class="chapters">
+    <div class="chapter ani d1">
+      <div class="chapter-num">01</div>
+      <div class="chapter-body">
+        <h3 class="chapter-title">サロンの売上をつくる、たった3つの要素</h3>
+        <p class="chapter-text">新規のお客様の人数、1回あたりの単価、そしてリピート率。サロンが伸び悩むとき、必ずこの3つのどこかが詰まっています。まず、ご自身のサロンのどこが詰まっているのかを見つけていただきます。</p>
+      </div>
+    </div>
+    <div class="chapter ani d2">
+      <div class="chapter-num">02</div>
+      <div class="chapter-body">
+        <h3 class="chapter-title">集客のやり方は、時代と一緒に変わり続ける</h3>
+        <p class="chapter-text">紙のチラシからホットペッパー、ブログ、Instagram、そしてリール動画へ。14年の現場で見てきた変化と、やり方だけを学び続けることの限界についてお話しします。</p>
+      </div>
+    </div>
+    <div class="chapter ani d3">
+      <div class="chapter-num">03</div>
+      <div class="chapter-body">
+        <h3 class="chapter-title">単価とリピートを支える「本質的な技術」とは</h3>
+        <p class="chapter-text">結果が出る技術であること。そして、ここでしか受けられないと感じていただける技術であること。この2つが揃っていないと、どれだけ集客をしてもお客様はこぼれ落ちていきます。</p>
+      </div>
+    </div>
+    <div class="chapter ani d4">
+      <div class="chapter-num">04</div>
+      <div class="chapter-body">
+        <h3 class="chapter-title">面長改善コルギと、天使の羽コルギ</h3>
+        <p class="chapter-text">顔の縦のラインにアプローチする面長改善コルギ。肩甲骨まわりから背中・首のラインを整える天使の羽コルギ。この2つにたどり着いた理由と、地域で唯一のポジションをつくるという考え方をお伝えします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="sec bg-pink" id="contact">
+  <div class="sec-label">NEXT STEP</div>
+  <h2 class="sec-title">無料個別相談のご案内</h2>
+  <div class="sec-line"></div>
+  <div class="cta-box ani">
+    <p class="cta-lead">
+      どちらのコースがあなたに合うのかは、<br>
+      一般論だけでは決められません。<br><br>
+      だから私は、<span class="em">直接お話を伺ってから</span><br>
+      お伝えする形にしています。
+    </p>
+    <a href="https://line.me/R/oaMessage/%40516jcmbq/?%E7%84%A1%E6%96%99%E7%9B%B8%E8%AB%87%E3%82%92%E5%B8%8C%E6%9C%9B%E3%81%97%E3%81%BE%E3%81%99" class="btn-main" target="_blank" rel="noopener">
+      <span class="line-icon"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2C6.48 2 2 5.79 2 10.45c0 4.18 3.6 7.68 8.47 8.34.33.07.78.22.89.5.1.26.07.66.03.92l-.14.86c-.04.26-.2 1.01.89.55s5.87-3.46 8.01-5.92C21.63 13.98 22 12.28 22 10.45 22 5.79 17.52 2 12 2z"/></svg></span>
+      公式LINEで相談する
+    </a>
+    <p class="cta-sub">ボタンを押すと、公式LINEのトーク画面が開き、<br>メッセージがすでに入力された状態になります。そのまま送信してください。</p>
+    <p class="cta-fallback"><a href="https://lin.ee/qu8lEEV" target="_blank" rel="noopener">うまく開かない場合はこちら</a></p>
+  </div>
+</section>
+
+<!-- ===== STEPS ===== -->
+<section class="sec bg-white">
+  <div class="sec-label">HOW TO</div>
+  <h2 class="sec-title">お申し込みの流れ</h2>
+  <div class="sec-line"></div>
+  <div class="steps">
+    <div class="step ani d1">
+      <div class="step-num">STEP 01</div>
+      <h3 class="step-title">ボタンを押す</h3>
+      <p class="step-text">上のボタンから、公式LINEのトーク画面を開いてください。</p>
+    </div>
+    <div class="step ani d2">
+      <div class="step-num">STEP 02</div>
+      <h3 class="step-title">そのまま送信する</h3>
+      <p class="step-text">メッセージはすでに入力されています。送信ボタンを押すだけです。</p>
+    </div>
+    <div class="step ani d3">
+      <div class="step-num">STEP 03</div>
+      <h3 class="step-title">候補日を3つ返信する</h3>
+      <p class="step-text">すぐにご案内が届きます。ご都合のよい日時を3つほどお送りください。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TALK POINTS ===== -->
+<section class="sec bg-beige">
+  <div class="sec-label">AGENDA</div>
+  <h2 class="sec-title">個別相談でお話しすること</h2>
+  <div class="sec-line"></div>
+  <div class="points">
+    <div class="point ani d1"><span class="point-check">✓</span><span>今のサロンの状況と、これからの目標について</span></div>
+    <div class="point ani d2"><span class="point-check">✓</span><span>ワンデーと3デイズ、どちらが合っているか</span></div>
+    <div class="point ani d3"><span class="point-check">✓</span><span>受講後にどんな未来を描けるのか</span></div>
+    <div class="point ani d4"><span class="point-check">✓</span><span>受講料の詳細と、特別なオファーについて</span></div>
+  </div>
+  <p style="max-width:520px;margin:32px auto 0;font-size:13px;line-height:2.2;color:var(--text-medium);letter-spacing:.5px">
+    オンライン（Zoom）で30分ほど、ゆっくりお話しできます。<br>
+    無理に決めるための時間ではなく、ご自身の方向を整理する時間として使ってください。
+  </p>
+</section>
+
+<!-- ===== INSTRUCTOR ===== -->
+<section class="sec bg-white">
+  <div class="sec-label">INSTRUCTOR</div>
+  <div class="sec-line"></div>
+  <div class="circle-img ani"><img src="../images/shiori.jpg" alt="講師 SHIORI"></div>
+  <div class="instructor-name ani d1">SHIORI</div>
+  <div class="instructor-role ani d1">BONA BONA SCHOOL 主宰</div>
+  <p class="instructor-bio ani d2">
+    仙台で面長改善コルギ・天使の羽コルギ専門サロン「BONA BONA」を運営。<br>
+    エステティシャンとしてキャリアをスタートして14年、ずっとサロンの現場で生きてきました。<br><br>
+    もっと早くこの技術と経営の本質を知れていたら。そう感じる場面が何度もありました。<br>
+    これから独立を目指す方も、すでにサロンを運営されている方も、遠回りせずに本当に大切なものから手にしていただきたいと思っています。
+  </p>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-logo">BONA BONA<span>SCHOOL</span></div>
+  <a href="https://korugi-school.jp/" class="footer-link">スクールの詳しい内容を見る</a>
+  <div class="footer-copy">&copy; BONA BONA SCHOOL</div>
+</footer>
+
+<div class="floating-cta">
+  <a href="https://line.me/R/oaMessage/%40516jcmbq/?%E7%84%A1%E6%96%99%E7%9B%B8%E8%AB%87%E3%82%92%E5%B8%8C%E6%9C%9B%E3%81%97%E3%81%BE%E3%81%99" target="_blank" rel="noopener">
+    <span class="line-icon"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2C6.48 2 2 5.79 2 10.45c0 4.18 3.6 7.68 8.47 8.34.33.07.78.22.89.5.1.26.07.66.03.92l-.14.86c-.04.26-.2 1.01.89.55s5.87-3.46 8.01-5.92C21.63 13.98 22 12.28 22 10.45 22 5.79 17.52 2 12 2z"/></svg></span>
+    無料で個別相談を申し込む
+  </a>
+</div>
+
+<script>
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); io.unobserve(e.target); } });
+}, { threshold: 0.15 });
+document.querySelectorAll('.ani').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
