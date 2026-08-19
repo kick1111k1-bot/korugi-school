@@ -36,7 +36,6 @@ body{font-family:'Noto Sans JP',sans-serif;font-weight:300;color:var(--text-dark
 .field-error{display:none;margin-top:7px;font-size:11px;line-height:1.7;color:var(--error)}
 .field.invalid .input,.field.invalid .select,.field.invalid .textarea{border-color:var(--error);background:#FFF9F9}
 .field.invalid .field-error{display:block}
-.privacy-note{padding:18px 20px;margin:8px 0 28px;background:var(--beige-light);font-size:11.5px;line-height:2;color:var(--text-medium);text-align:center}
 .submit-wrap{text-align:center}
 .submit-btn{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-width:300px;padding:19px 36px;border:0;border-radius:50px;background:var(--pink-deep);color:var(--white);font-family:'Noto Serif JP',serif;font-size:14px;letter-spacing:3px;cursor:pointer;transition:background .3s,transform .3s,box-shadow .3s}
 .submit-btn:hover:not(:disabled){background:var(--text-dark);transform:translateY(-2px);box-shadow:0 12px 32px rgba(61,46,46,.18)}
@@ -89,19 +88,19 @@ body{font-family:'Noto Sans JP',sans-serif;font-weight:300;color:var(--text-dark
 
         <div class="field" data-field="name">
           <label class="field-label" for="name">氏名 <span class="required">必須</span></label>
-          <input class="input" type="text" id="name" name="entry.385616298" autocomplete="name" maxlength="80" placeholder="例：嘉数 志緒里" required>
+          <input class="input" type="text" id="name" name="entry.385616298" autocomplete="name" maxlength="80" placeholder="例：山田 花子" required>
           <p class="field-error">氏名を入力してください。</p>
         </div>
 
         <div class="field" data-field="email">
           <label class="field-label" for="email">メールアドレス <span class="required">必須</span></label>
-          <input class="input" type="email" id="email" name="entry.350347917" autocomplete="email" maxlength="160" inputmode="email" placeholder="例：example@gmail.com" required>
+          <input class="input" type="email" id="email" name="entry.350347917" autocomplete="email" maxlength="160" inputmode="email" placeholder="メールアドレスを入力" required>
           <p class="field-error">正しいメールアドレスを入力してください。</p>
         </div>
 
         <div class="field" data-field="phone">
           <label class="field-label" for="phone">電話番号 <span class="required">必須</span></label>
-          <input class="input" type="tel" id="phone" name="entry.1238475697" autocomplete="tel" maxlength="24" inputmode="tel" placeholder="例：090-1234-5678" required>
+          <input class="input" type="tel" id="phone" name="entry.1238475697" autocomplete="tel" maxlength="24" inputmode="tel" placeholder="電話番号を入力（ハイフンあり・なし）" required>
           <p class="field-error">正しい電話番号を入力してください。</p>
         </div>
 
@@ -130,8 +129,6 @@ body{font-family:'Noto Sans JP',sans-serif;font-weight:300;color:var(--text-dark
           <input class="input" type="text" id="lineName" name="entry.1384304825" maxlength="100" placeholder="LINEで表示されているお名前" required>
           <p class="field-error">LINE名を入力してください。</p>
         </div>
-
-        <p class="privacy-note">ご入力いただいた情報は、個別相談の受付とご連絡のためにのみ使用し、Googleフォームを通じて指定のスプレッドシートに保存します。送信時にはGoogleのCookie等が利用される場合があります。</p>
 
         <div class="submit-wrap">
           <button class="submit-btn" id="submitButton" type="submit">
