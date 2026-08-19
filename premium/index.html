@@ -64,12 +64,8 @@ body{font-family:'Noto Sans JP',sans-serif;font-weight:300;color:var(--text-dark
 .cta-lead .em{color:var(--pink-deep);font-weight:400}
 .btn-main{display:inline-flex;align-items:center;gap:12px;padding:20px 44px;background:var(--pink);color:var(--white);font-family:'Noto Serif JP',serif;font-weight:400;font-size:14px;letter-spacing:3px;text-decoration:none;border:none;cursor:pointer;transition:all .4s ease;border-radius:50px}
 .btn-main:hover{background:var(--pink-deep);transform:translateY(-2px);box-shadow:0 12px 36px rgba(184,120,120,.3)}
-.line-icon{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;background:#06C755;border-radius:6px;flex-shrink:0;box-shadow:0 2px 8px rgba(6,199,85,.35)}
-.line-icon svg{width:18px;height:18px}
+.btn-arrow{font-family:'Cormorant Garamond',serif;font-size:22px;line-height:1}
 .cta-sub{margin-top:24px;font-size:12px;line-height:2;color:var(--text-light);letter-spacing:1px}
-.cta-fallback{margin-top:14px;font-size:11px;letter-spacing:1px}
-.cta-fallback a{color:var(--text-light);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px;transition:color .3s}
-.cta-fallback a:hover{color:var(--pink-deep)}
 @media(max-width:767px){.cta-box{padding:36px 22px}.btn-main{padding:18px 30px;font-size:13px;letter-spacing:2px}}
 
 /* ===== STEPS ===== */
@@ -106,8 +102,7 @@ body{font-family:'Noto Sans JP',sans-serif;font-weight:300;color:var(--text-dark
 .floating-cta{position:fixed;bottom:24px;right:24px;z-index:99;animation:pulse 2.5s ease infinite}
 .floating-cta a{display:flex;align-items:center;justify-content:center;gap:10px;padding:16px 30px;background:var(--pink-deep);color:var(--white);font-family:'Noto Serif JP',serif;font-size:13px;letter-spacing:2px;text-decoration:none;border-radius:50px;box-shadow:0 8px 32px rgba(184,120,120,.4);transition:all .3s;white-space:nowrap}
 .floating-cta a:hover{background:var(--text-dark)}
-.floating-cta .line-icon{width:22px;height:22px}
-.floating-cta .line-icon svg{width:15px;height:15px}
+.floating-cta .btn-arrow{font-size:19px}
 @media(max-width:767px){
   body{padding-bottom:80px}
   .footer{padding-bottom:56px}
@@ -196,12 +191,11 @@ body{font-family:'Noto Sans JP',sans-serif;font-weight:300;color:var(--text-dark
       だから私は、<span class="em">直接お話を伺ってから</span><br>
       お伝えする形にしています。
     </p>
-    <a href="https://line.me/R/oaMessage/%40516jcmbq/?%E7%84%A1%E6%96%99%E7%9B%B8%E8%AB%87%E3%82%92%E5%B8%8C%E6%9C%9B%E3%81%97%E3%81%BE%E3%81%99" class="btn-main" target="_blank" rel="noopener">
-      <span class="line-icon"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2C6.48 2 2 5.79 2 10.45c0 4.18 3.6 7.68 8.47 8.34.33.07.78.22.89.5.1.26.07.66.03.92l-.14.86c-.04.26-.2 1.01.89.55s5.87-3.46 8.01-5.92C21.63 13.98 22 12.28 22 10.45 22 5.79 17.52 2 12 2z"/></svg></span>
-      公式LINEで相談する
+    <a href="../consultation/" class="btn-main">
+      個別相談を申し込む
+      <span class="btn-arrow" aria-hidden="true">→</span>
     </a>
-    <p class="cta-sub">ボタンを押すと、公式LINEのトーク画面が開き、<br>メッセージがすでに入力された状態になります。そのまま送信してください。</p>
-    <p class="cta-fallback"><a href="https://lin.ee/qu8lEEV" target="_blank" rel="noopener">うまく開かない場合はこちら</a></p>
+    <p class="cta-sub">専用フォームに必要事項をご入力ください。<br>内容を確認後、担当者よりご連絡いたします。</p>
   </div>
 </section>
 
@@ -213,18 +207,18 @@ body{font-family:'Noto Sans JP',sans-serif;font-weight:300;color:var(--text-dark
   <div class="steps">
     <div class="step ani d1">
       <div class="step-num">STEP 01</div>
-      <h3 class="step-title">ボタンを押す</h3>
-      <p class="step-text">上のボタンから、公式LINEのトーク画面を開いてください。</p>
+      <h3 class="step-title">フォームを開く</h3>
+      <p class="step-text">上のボタンから、個別相談のお申し込みフォームを開いてください。</p>
     </div>
     <div class="step ani d2">
       <div class="step-num">STEP 02</div>
-      <h3 class="step-title">そのまま送信する</h3>
-      <p class="step-text">メッセージはすでに入力されています。送信ボタンを押すだけです。</p>
+      <h3 class="step-title">必要事項を入力する</h3>
+      <p class="step-text">お名前やご連絡先、現在のお悩みをご入力ください。</p>
     </div>
     <div class="step ani d3">
       <div class="step-num">STEP 03</div>
-      <h3 class="step-title">候補日を3つ返信する</h3>
-      <p class="step-text">すぐにご案内が届きます。ご都合のよい日時を3つほどお送りください。</p>
+      <h3 class="step-title">担当者からの連絡を待つ</h3>
+      <p class="step-text">内容を確認後、個別相談の日程についてご連絡いたします。</p>
     </div>
   </div>
 </section>
@@ -269,9 +263,9 @@ body{font-family:'Noto Sans JP',sans-serif;font-weight:300;color:var(--text-dark
 </footer>
 
 <div class="floating-cta">
-  <a href="https://line.me/R/oaMessage/%40516jcmbq/?%E7%84%A1%E6%96%99%E7%9B%B8%E8%AB%87%E3%82%92%E5%B8%8C%E6%9C%9B%E3%81%97%E3%81%BE%E3%81%99" target="_blank" rel="noopener">
-    <span class="line-icon"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2C6.48 2 2 5.79 2 10.45c0 4.18 3.6 7.68 8.47 8.34.33.07.78.22.89.5.1.26.07.66.03.92l-.14.86c-.04.26-.2 1.01.89.55s5.87-3.46 8.01-5.92C21.63 13.98 22 12.28 22 10.45 22 5.79 17.52 2 12 2z"/></svg></span>
-    無料で個別相談を申し込む
+  <a href="../consultation/">
+    個別相談を申し込む
+    <span class="btn-arrow" aria-hidden="true">→</span>
   </a>
 </div>
 

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>個別相談お申し込み | BONA BONA SCHOOL</title>
+<meta property="og:title" content="個別相談お申し込み | BONA BONA SCHOOL">
+<meta property="og:description" content="BONA BONA SCHOOLの個別相談お申し込みフォームです。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&amp;family=Noto+Serif+JP:wght@300;400;500&amp;family=Noto+Sans+JP:wght@300;400;500&amp;display=swap" rel="stylesheet">
+<style>
+:root{--pink:#D4A0A0;--pink-light:#E8C5C5;--pink-pale:#F5E6E6;--pink-deep:#B87878;--beige-light:#F7F0EA;--cream:#FBF8F5;--white:#FFFFFF;--text-dark:#3D2E2E;--text-medium:#6B5555;--text-light:#9A8585;--line:#E0D0D0;--error:#A74646;--success:#52725A}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans JP',sans-serif;font-weight:300;color:var(--text-dark);background:var(--cream);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(251,248,245,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(212,160,160,.15)}
+.nav-inner{max-width:1000px;margin:0 auto;display:flex;justify-content:center;align-items:center;padding:12px 24px}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:18px;letter-spacing:4px;color:var(--text-dark);text-decoration:none;text-align:center}
+.nav-logo span{font-size:10px;letter-spacing:3px;color:var(--text-light);display:block;margin-top:2px}
+.hero{padding:128px 24px 58px;text-align:center;background:linear-gradient(175deg,var(--cream) 0%,var(--pink-pale) 65%,var(--pink-light) 100%)}
+.hero-label{font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:5px;color:var(--pink-deep);margin-bottom:20px}
+.hero-title{font-family:'Noto Serif JP',serif;font-weight:400;font-size:clamp(22px,4.4vw,32px);letter-spacing:4px;line-height:1.8;margin-bottom:18px}
+.hero-text{font-family:'Noto Serif JP',serif;font-size:13.5px;line-height:2.2;letter-spacing:1px;color:var(--text-medium)}
+.main{padding:56px 20px 88px}
+.form-card{max-width:720px;margin:0 auto;background:var(--white);border:1px solid var(--line);padding:48px 50px;box-shadow:0 16px 50px rgba(61,46,46,.07)}
+.form-intro{font-size:13px;line-height:2;color:var(--text-medium);letter-spacing:.5px;margin-bottom:38px;text-align:center}
+.required-note{font-size:11px;color:var(--text-light);text-align:right;margin-bottom:18px}
+.field{margin-bottom:27px}
+.field-label{display:flex;align-items:center;gap:9px;font-family:'Noto Serif JP',serif;font-weight:400;font-size:14px;letter-spacing:1px;margin-bottom:10px}
+.required{display:inline-block;padding:3px 7px;background:var(--pink-deep);color:var(--white);font-family:'Noto Sans JP',sans-serif;font-size:9px;line-height:1;letter-spacing:1px}
+.input,.select,.textarea{width:100%;border:1px solid var(--line);background:var(--cream);color:var(--text-dark);font:300 15px/1.6 'Noto Sans JP',sans-serif;padding:14px 16px;border-radius:0;outline:none;transition:border-color .25s,box-shadow .25s,background .25s}
+.input:focus,.select:focus,.textarea:focus{border-color:var(--pink-deep);box-shadow:0 0 0 3px rgba(212,160,160,.16);background:var(--white)}
+.input::placeholder,.textarea::placeholder{color:#B8AAAA}
+.textarea{min-height:160px;resize:vertical}
+.field-error{display:none;margin-top:7px;font-size:11px;line-height:1.7;color:var(--error)}
+.field.invalid .input,.field.invalid .select,.field.invalid .textarea{border-color:var(--error);background:#FFF9F9}
+.field.invalid .field-error{display:block}
+.privacy-note{padding:18px 20px;margin:8px 0 28px;background:var(--beige-light);font-size:11.5px;line-height:2;color:var(--text-medium);text-align:center}
+.submit-wrap{text-align:center}
+.submit-btn{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-width:300px;padding:19px 36px;border:0;border-radius:50px;background:var(--pink-deep);color:var(--white);font-family:'Noto Serif JP',serif;font-size:14px;letter-spacing:3px;cursor:pointer;transition:background .3s,transform .3s,box-shadow .3s}
+.submit-btn:hover:not(:disabled){background:var(--text-dark);transform:translateY(-2px);box-shadow:0 12px 32px rgba(61,46,46,.18)}
+.submit-btn:disabled{opacity:.65;cursor:wait}
+.submit-arrow{font-family:'Cormorant Garamond',serif;font-size:22px;line-height:1}
+.form-status{min-height:24px;margin-top:18px;font-size:12px;line-height:1.8;text-align:center;color:var(--error)}
+.success-box{display:none;text-align:center;padding:46px 24px}
+.success-box.show{display:block}
+.success-mark{width:54px;height:54px;margin:0 auto 24px;border:1px solid var(--pink-deep);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--pink-deep);font-family:'Cormorant Garamond',serif;font-size:25px}
+.success-title{font-family:'Noto Serif JP',serif;font-size:21px;font-weight:400;letter-spacing:2px;line-height:1.8;margin-bottom:18px}
+.success-text{font-size:13px;line-height:2.2;color:var(--text-medium)}
+.back-link{display:inline-block;margin-top:30px;color:var(--pink-deep);font-size:12px;letter-spacing:1px;text-decoration:none;border-bottom:1px solid var(--pink-light);padding-bottom:3px}
+.honeypot{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;overflow:hidden!important}
+.submission-frame{position:absolute;width:1px;height:1px;border:0;opacity:0;pointer-events:none}
+.footer{padding:48px 24px;text-align:center;background:var(--text-dark);color:var(--white)}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:18px;letter-spacing:5px}
+.footer-logo span{display:block;font-size:10px;letter-spacing:3px;color:rgba(255,255,255,.5);margin-top:6px}
+.footer-copy{margin-top:25px;font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:2px;color:rgba(255,255,255,.4)}
+@media(max-width:767px){.hero{padding:112px 20px 48px}.hero-title{letter-spacing:2px}.main{padding:34px 14px 64px}.form-card{padding:34px 20px}.form-intro{text-align:left}.submit-btn{width:100%;min-width:0;padding:18px 20px;font-size:13px;letter-spacing:2px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../" class="nav-logo">BONA BONA<span>SCHOOL</span></a>
+  </div>
+</nav>
+
+<header class="hero">
+  <p class="hero-label">PRIVATE CONSULTATION</p>
+  <h1 class="hero-title">個別相談お申し込み</h1>
+  <p class="hero-text">今の状況やこれからの目標を伺い、<br>あなたに合う学び方を一緒に整理します。</p>
+</header>
+
+<main class="main">
+  <section class="form-card" aria-labelledby="form-heading">
+    <div id="formArea">
+      <p class="form-intro" id="form-heading">下記の項目をご入力ください。<br>内容を確認後、担当者より個別相談の日程についてご連絡いたします。</p>
+      <p class="required-note">すべて必須項目です</p>
+
+      <form id="consultationForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScrpcAAJDi3BBXkUoxa70IAWUXMz4dmDGE1gXbVsyud7muH0w/formResponse" method="post" target="googleFormTarget" novalidate>
+        <input type="hidden" name="fvv" value="1">
+        <input type="hidden" name="pageHistory" value="0">
+        <div class="honeypot" aria-hidden="true">
+          <label for="website">ウェブサイト</label>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="field" data-field="name">
+          <label class="field-label" for="name">氏名 <span class="required">必須</span></label>
+          <input class="input" type="text" id="name" name="entry.385616298" autocomplete="name" maxlength="80" placeholder="例：嘉数 志緒里" required>
+          <p class="field-error">氏名を入力してください。</p>
+        </div>
+
+        <div class="field" data-field="email">
+          <label class="field-label" for="email">メールアドレス <span class="required">必須</span></label>
+          <input class="input" type="email" id="email" name="entry.350347917" autocomplete="email" maxlength="160" inputmode="email" placeholder="例：example@gmail.com" required>
+          <p class="field-error">正しいメールアドレスを入力してください。</p>
+        </div>
+
+        <div class="field" data-field="phone">
+          <label class="field-label" for="phone">電話番号 <span class="required">必須</span></label>
+          <input class="input" type="tel" id="phone" name="entry.1238475697" autocomplete="tel" maxlength="24" inputmode="tel" placeholder="例：090-1234-5678" required>
+          <p class="field-error">正しい電話番号を入力してください。</p>
+        </div>
+
+        <div class="field" data-field="prefecture">
+          <label class="field-label" for="prefecture">都道府県 <span class="required">必須</span></label>
+          <select class="select" id="prefecture" name="entry.1629137294" autocomplete="address-level1" required>
+            <option value="">選択してください</option>
+            <option>北海道</option><option>青森県</option><option>岩手県</option><option>宮城県</option><option>秋田県</option><option>山形県</option><option>福島県</option>
+            <option>茨城県</option><option>栃木県</option><option>群馬県</option><option>埼玉県</option><option>千葉県</option><option>東京都</option><option>神奈川県</option>
+            <option>新潟県</option><option>富山県</option><option>石川県</option><option>福井県</option><option>山梨県</option><option>長野県</option><option>岐阜県</option><option>静岡県</option><option>愛知県</option>
+            <option>三重県</option><option>滋賀県</option><option>京都府</option><option>大阪府</option><option>兵庫県</option><option>奈良県</option><option>和歌山県</option>
+            <option>鳥取県</option><option>島根県</option><option>岡山県</option><option>広島県</option><option>山口県</option><option>徳島県</option><option>香川県</option><option>愛媛県</option><option>高知県</option>
+            <option>福岡県</option><option>佐賀県</option><option>長崎県</option><option>熊本県</option><option>大分県</option><option>宮崎県</option><option>鹿児島県</option><option>沖縄県</option><option>海外</option>
+          </select>
+          <p class="field-error">都道府県を選択してください。</p>
+        </div>
+
+        <div class="field" data-field="concern">
+          <label class="field-label" for="concern">お悩み <span class="required">必須</span></label>
+          <textarea class="textarea" id="concern" name="entry.609868120" maxlength="2000" placeholder="現在のお悩みや、個別相談で聞きたいことをご記入ください。" required></textarea>
+          <p class="field-error">お悩みを入力してください。</p>
+        </div>
+
+        <div class="field" data-field="lineName">
+          <label class="field-label" for="lineName">LINE名 <span class="required">必須</span></label>
+          <input class="input" type="text" id="lineName" name="entry.1384304825" maxlength="100" placeholder="LINEで表示されているお名前" required>
+          <p class="field-error">LINE名を入力してください。</p>
+        </div>
+
+        <p class="privacy-note">ご入力いただいた情報は、個別相談の受付とご連絡のためにのみ使用し、Googleフォームを通じて指定のスプレッドシートに保存します。送信時にはGoogleのCookie等が利用される場合があります。</p>
+
+        <div class="submit-wrap">
+          <button class="submit-btn" id="submitButton" type="submit">
+            <span id="submitLabel">この内容で申し込む</span>
+            <span class="submit-arrow" aria-hidden="true">→</span>
+          </button>
+          <p class="form-status" id="formStatus" role="alert" aria-live="polite"></p>
+        </div>
+      </form>
+      <iframe class="submission-frame" id="googleFormTarget" name="googleFormTarget" title="フォーム送信結果" aria-hidden="true"></iframe>
+    </div>
+
+    <div class="success-box" id="successBox" tabindex="-1">
+      <div class="success-mark" aria-hidden="true">✓</div>
+      <h2 class="success-title">お申し込みを<br>受け付けました</h2>
+      <p class="success-text">ありがとうございます。<br>内容を確認後、担当者よりご連絡いたします。</p>
+      <a class="back-link" href="../premium/">説明動画のページへ戻る</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-logo">BONA BONA<span>SCHOOL</span></div>
+  <div class="footer-copy">&copy; BONA BONA SCHOOL</div>
+</footer>
+
+<script>
+const form = document.getElementById('consultationForm');
+const formArea = document.getElementById('formArea');
+const successBox = document.getElementById('successBox');
+const submitButton = document.getElementById('submitButton');
+const submitLabel = document.getElementById('submitLabel');
+const formStatus = document.getElementById('formStatus');
+const googleFormTarget = document.getElementById('googleFormTarget');
+const honeypot = document.getElementById('website');
+let submissionStarted = false;
+
+function normalizePhone(value) {
+  return value.replace(/[０-９]/g, char => String.fromCharCode(char.charCodeAt(0) - 65248));
+}
+
+function validateField(element) {
+  const field = element.closest('.field');
+  let valid = element.value.trim() !== '';
+
+  if (element.type === 'email' && valid) valid = element.validity.valid;
+  if (element.id === 'phone' && valid) {
+    const digits = normalizePhone(element.value).replace(/\D/g, '');
+    valid = digits.length >= 10 && digits.length <= 15;
+  }
+
+  field.classList.toggle('invalid', !valid);
+  element.setAttribute('aria-invalid', String(!valid));
+  return valid;
+}
+
+form.querySelectorAll('input[required], select[required], textarea[required]').forEach(element => {
+  element.addEventListener('blur', () => validateField(element));
+  element.addEventListener('input', () => {
+    if (element.closest('.field').classList.contains('invalid')) validateField(element);
+  });
+  element.addEventListener('change', () => validateField(element));
+});
+
+function showSuccess() {
+  form.reset();
+  formArea.hidden = true;
+  successBox.classList.add('show');
+  successBox.focus();
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+form.addEventListener('submit', event => {
+  formStatus.textContent = '';
+
+  const requiredFields = [...form.querySelectorAll('input[required], select[required], textarea[required]')];
+  const allValid = requiredFields.map(validateField).every(Boolean);
+  if (!allValid) {
+    event.preventDefault();
+    const firstInvalid = form.querySelector('[aria-invalid="true"]');
+    if (firstInvalid) firstInvalid.focus();
+    formStatus.textContent = '入力内容をご確認ください。';
+    return;
+  }
+
+  if (honeypot.value) {
+    event.preventDefault();
+    showSuccess();
+    return;
+  }
+
+  submissionStarted = true;
+  submitButton.disabled = true;
+  submitLabel.textContent = '送信しています';
+});
+
+googleFormTarget.addEventListener('load', () => {
+  if (!submissionStarted) return;
+  submissionStarted = false;
+  showSuccess();
+});
+</script>
+
+</body>
+</html>
