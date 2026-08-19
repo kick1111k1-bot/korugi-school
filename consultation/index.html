@@ -24,11 +24,11 @@ body{font-family:'Noto Sans JP',sans-serif;font-weight:300;color:var(--text-dark
 .hero-text{font-family:'Noto Serif JP',serif;font-size:13.5px;line-height:2.2;letter-spacing:1px;color:var(--text-medium)}
 .main{padding:56px 20px 88px}
 .form-card{max-width:720px;margin:0 auto;background:var(--white);border:1px solid var(--line);padding:48px 50px;box-shadow:0 16px 50px rgba(61,46,46,.07)}
-.form-intro{font-size:13px;line-height:2;color:var(--text-medium);letter-spacing:.5px;margin-bottom:38px;text-align:center}
+.form-intro{font-size:13px;line-height:2;color:var(--text-medium);letter-spacing:.5px;margin-bottom:38px;text-align:left}
 .required-note{font-size:11px;color:var(--text-light);text-align:right;margin-bottom:18px}
 .field{margin-bottom:27px}
-.field-label{display:flex;align-items:center;gap:9px;font-family:'Noto Serif JP',serif;font-weight:400;font-size:14px;letter-spacing:1px;margin-bottom:10px}
-.required{display:inline-block;padding:3px 7px;background:var(--pink-deep);color:var(--white);font-family:'Noto Sans JP',sans-serif;font-size:9px;line-height:1;letter-spacing:1px}
+.field-label{display:flex;align-items:flex-start;gap:9px;font-family:'Noto Serif JP',serif;font-weight:400;font-size:14px;letter-spacing:1px;line-height:1.9;margin-bottom:10px}
+.required{display:inline-block;flex:0 0 auto;margin-top:5px;padding:3px 7px;background:var(--pink-deep);color:var(--white);font-family:'Noto Sans JP',sans-serif;font-size:9px;line-height:1;letter-spacing:1px}
 .input,.select,.textarea{width:100%;border:1px solid var(--line);background:var(--cream);color:var(--text-dark);font:300 16px/1.6 'Noto Sans JP',sans-serif;padding:14px 16px;border-radius:0;outline:none;transition:border-color .25s,box-shadow .25s,background .25s}
 .input:focus,.select:focus,.textarea:focus{border-color:var(--pink-deep);box-shadow:0 0 0 3px rgba(212,160,160,.16);background:var(--white)}
 .input::placeholder,.textarea::placeholder{color:#B8AAAA}
@@ -75,7 +75,7 @@ body{font-family:'Noto Sans JP',sans-serif;font-weight:300;color:var(--text-dark
 <main class="main">
   <section class="form-card" aria-labelledby="form-heading">
     <div id="formArea">
-      <p class="form-intro" id="form-heading">下記の項目をご入力ください。<br>内容を確認後、担当者より個別相談の日程についてご連絡いたします。</p>
+      <p class="form-intro" id="form-heading">当スクールでは、現在の状況やお悩みをしっかりお伺いした上で、その方に合った学び方や今後の方向性をご提案しています。<br><br>無理な勧誘などはありませんので、まだ具体的に決まっていない方もお気軽にご相談ください。<br><br>内容を確認後、担当者より個別相談の日程についてご連絡いたします。</p>
       <p class="required-note">すべて必須項目です</p>
 
       <form id="consultationForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScrpcAAJDi3BBXkUoxa70IAWUXMz4dmDGE1gXbVsyud7muH0w/formResponse" method="post" target="googleFormTarget" novalidate>
@@ -119,9 +119,15 @@ body{font-family:'Noto Sans JP',sans-serif;font-weight:300;color:var(--text-dark
         </div>
 
         <div class="field" data-field="concern">
-          <label class="field-label" for="concern">お悩み <span class="required">必須</span></label>
-          <textarea class="textarea" id="concern" name="entry.609868120" maxlength="2000" placeholder="現在のお悩みや、個別相談で聞きたいことをご記入ください。" required></textarea>
-          <p class="field-error">お悩みを入力してください。</p>
+          <label class="field-label" for="concern">現在、お仕事やサロン運営・技術習得について、どのようなお悩みや不安がありますか？ <span class="required">必須</span></label>
+          <textarea class="textarea" id="concern" name="entry.609868120" maxlength="2000" placeholder="例）売上がなかなか上がらない／集客に悩んでいる／リピートにつながらない／これからサロンを始めたい／未経験から技術を身につけたい／今のメニューに新しい技術を追加したい など" required></textarea>
+          <p class="field-error">現在のお悩みや不安を入力してください。</p>
+        </div>
+
+        <div class="field" data-field="motivation">
+          <label class="field-label" for="motivation">今回、無料相談を受けてみようと思ったきっかけを教えてください。 <span class="required">必須</span></label>
+          <textarea class="textarea" id="motivation" name="entry.1472585277" maxlength="2000" placeholder="きっかけをご記入ください。" required></textarea>
+          <p class="field-error">無料相談を受けてみようと思ったきっかけを入力してください。</p>
         </div>
 
         <div class="field" data-field="lineName">
