@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
 <title>個別相談お申し込み | BONA BONA SCHOOL</title>
 <meta property="og:title" content="個別相談お申し込み | BONA BONA SCHOOL">
 <meta property="og:description" content="BONA BONA SCHOOLの個別相談お申し込みフォームです。">
@@ -49,7 +50,14 @@ body{font-family:'Noto Sans JP',sans-serif;font-weight:300;color:var(--text-dark
 .success-text{font-size:13px;line-height:2.2;color:var(--text-medium)}
 .back-link{display:inline-block;margin-top:30px;color:var(--pink-deep);font-size:12px;letter-spacing:1px;text-decoration:none;border-bottom:1px solid var(--pink-light);padding-bottom:3px}
 .honeypot{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;overflow:hidden!important}
-.submission-frame{position:absolute;width:1px;height:1px;border:0;opacity:0;pointer-events:none}
+.line-panel{padding:22px;margin-bottom:28px;background:var(--cream);border:1px solid var(--line);text-align:center;font-size:13px;line-height:2}
+.line-action{display:inline-block;margin-top:14px;padding:12px 20px;background:#067A35;color:white;border:0;border-radius:30px;text-decoration:none;font:inherit;cursor:pointer}
+.line-action:disabled{opacity:.5;cursor:wait}
+.line-action[hidden],[hidden]{display:none!important}
+.line-help{font-size:12px;line-height:1.9;color:var(--text-medium);margin:12px 0}
+.form-fields{border:0;min-width:0}
+.form-fields:disabled{opacity:.55}
+.line-name{font-size:14px;overflow-wrap:anywhere}
 .footer{padding:48px 24px;text-align:center;background:var(--text-dark);color:var(--white)}
 .footer-logo{font-family:'Cormorant Garamond',serif;font-size:18px;letter-spacing:5px}
 .footer-logo span{display:block;font-size:10px;letter-spacing:3px;color:rgba(255,255,255,.5);margin-top:6px}
@@ -78,9 +86,15 @@ body{font-family:'Noto Sans JP',sans-serif;font-weight:300;color:var(--text-dark
       <p class="form-intro" id="form-heading">当スクールでは、現在の状況やお悩みをしっかりお伺いした上で、その方に合った学び方や今後の方向性をご提案しています。<br><br>無理な勧誘などはありませんので、まだ具体的に決まっていない方もお気軽にご相談ください。<br><br>内容を確認後、担当者より個別相談の日程についてご連絡いたします。</p>
       <p class="required-note">すべて必須項目です</p>
 
-      <form id="consultationForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScrpcAAJDi3BBXkUoxa70IAWUXMz4dmDGE1gXbVsyud7muH0w/formResponse" method="post" target="googleFormTarget" novalidate>
-        <input type="hidden" name="fvv" value="1">
-        <input type="hidden" name="pageHistory" value="0">
+      <div class="line-panel" id="linePanel">
+        <p id="lineStatus" role="status" aria-live="polite">LINEとの接続を確認しています。</p>
+        <button type="button" id="lineLogin" class="line-action" hidden>LINEでログインして入力する</button>
+        <a id="lineAdd" class="line-action" href="https://lin.ee/qu8lEEV" target="_blank" rel="noopener noreferrer" hidden>公式LINEを友だち追加する</a>
+        <button type="button" id="lineRecheck" class="line-action" hidden>接続を再確認する</button>
+        <noscript>お申し込みにはJavaScriptが必要です。有効にするか、<a href="https://lin.ee/qu8lEEV">公式LINE</a>からご相談ください。</noscript>
+      </div>
+      <form id="consultationForm" novalidate>
+        <fieldset id="formFields" class="form-fields" disabled>
         <div class="honeypot" aria-hidden="true">
           <label for="website">ウェブサイト</label>
           <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
@@ -130,10 +144,10 @@ body{font-family:'Noto Sans JP',sans-serif;font-weight:300;color:var(--text-dark
           <p class="field-error">無料相談を受けてみようと思ったきっかけを入力してください。</p>
         </div>
 
-        <div class="field" data-field="lineName">
-          <label class="field-label" for="lineName">LINE名 <span class="required">必須</span></label>
-          <input class="input" type="text" id="lineName" name="entry.1384304825" maxlength="100" placeholder="LINEで表示されているお名前" required>
-          <p class="field-error">LINE名を入力してください。</p>
+        <div class="field">
+          <p class="field-label">LINE名</p>
+          <p class="line-name" id="lineName">ログイン後に表示されます</p>
+          <p class="line-help">受付と日程のご案内は、このLINEアカウントにお送りします。</p>
         </div>
 
         <div class="submit-wrap">
@@ -143,14 +157,18 @@ body{font-family:'Noto Sans JP',sans-serif;font-weight:300;color:var(--text-dark
           </button>
           <p class="form-status" id="formStatus" role="alert" aria-live="polite"></p>
         </div>
+        </fieldset>
       </form>
-      <iframe class="submission-frame" id="googleFormTarget" name="googleFormTarget" title="フォーム送信結果" aria-hidden="true"></iframe>
     </div>
 
     <div class="success-box" id="successBox" tabindex="-1">
       <div class="success-mark" aria-hidden="true">✓</div>
       <h2 class="success-title">お申し込みを<br>受け付けました</h2>
-      <p class="success-text">ありがとうございます。<br>内容を確認後、担当者よりご連絡いたします。</p>
+      <p class="success-text" id="receiptStatus" role="status" aria-live="polite"></p>
+      <button type="button" class="line-action" id="retryReceipt" hidden>LINEの受付通知を再送する</button>
+      <p class="line-help" id="chatHelp"></p>
+      <a class="line-action" id="openLine" href="https://lin.ee/qu8lEEV">公式LINEを開く</a>
+      <br>
       <a class="back-link" href="../premium/">説明動画のページへ戻る</a>
     </div>
   </section>
@@ -161,82 +179,9 @@ body{font-family:'Noto Sans JP',sans-serif;font-weight:300;color:var(--text-dark
   <div class="footer-copy">&copy; BONA BONA SCHOOL</div>
 </footer>
 
-<script>
-const form = document.getElementById('consultationForm');
-const formArea = document.getElementById('formArea');
-const successBox = document.getElementById('successBox');
-const submitButton = document.getElementById('submitButton');
-const submitLabel = document.getElementById('submitLabel');
-const formStatus = document.getElementById('formStatus');
-const googleFormTarget = document.getElementById('googleFormTarget');
-const honeypot = document.getElementById('website');
-let submissionStarted = false;
+<script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+<script src="line-form.js?v=20260915" defer></script>
 
-function normalizePhone(value) {
-  return value.replace(/[０-９]/g, char => String.fromCharCode(char.charCodeAt(0) - 65248));
-}
-
-function validateField(element) {
-  const field = element.closest('.field');
-  let valid = element.value.trim() !== '';
-
-  if (element.type === 'email' && valid) valid = element.validity.valid;
-  if (element.id === 'phone' && valid) {
-    const digits = normalizePhone(element.value).replace(/\D/g, '');
-    valid = digits.length >= 10 && digits.length <= 15;
-  }
-
-  field.classList.toggle('invalid', !valid);
-  element.setAttribute('aria-invalid', String(!valid));
-  return valid;
-}
-
-form.querySelectorAll('input[required], select[required], textarea[required]').forEach(element => {
-  element.addEventListener('blur', () => validateField(element));
-  element.addEventListener('input', () => {
-    if (element.closest('.field').classList.contains('invalid')) validateField(element);
-  });
-  element.addEventListener('change', () => validateField(element));
-});
-
-function showSuccess() {
-  form.reset();
-  formArea.hidden = true;
-  successBox.classList.add('show');
-  successBox.focus();
-  window.scrollTo({top: 0, behavior: 'smooth'});
-}
-
-form.addEventListener('submit', event => {
-  formStatus.textContent = '';
-
-  const requiredFields = [...form.querySelectorAll('input[required], select[required], textarea[required]')];
-  const allValid = requiredFields.map(validateField).every(Boolean);
-  if (!allValid) {
-    event.preventDefault();
-    const firstInvalid = form.querySelector('[aria-invalid="true"]');
-    if (firstInvalid) firstInvalid.focus();
-    formStatus.textContent = '入力内容をご確認ください。';
-    return;
-  }
-
-  if (honeypot.value) {
-    event.preventDefault();
-    showSuccess();
-    return;
-  }
-
-  submissionStarted = true;
-  submitButton.disabled = true;
-  submitLabel.textContent = '送信しています';
-});
-
-googleFormTarget.addEventListener('load', () => {
-  if (!submissionStarted) return;
-  submissionStarted = false;
-  showSuccess();
-});
-</script>
 
 </body>
 </html>
