@@ -55,7 +55,7 @@
     $('formArea').hidden = true;
     $('successBox').classList.add('show');
     $('receiptStatus').textContent = application.lineMessageSent
-      ? '受付内容をLINEにお送りしました。内容を確認後、shioriより日程についてご連絡いたします。'
+      ? '受付内容をLINEにお送りしました。内容を確認後、SHIORIより日程についてご連絡いたします。'
       : 'お申し込みは保存できています。LINEの受付通知がまだ届いていないため、下のボタンから通知を再送してください。申し込み直す必要はありません。';
     $('retryReceipt').hidden = application.lineMessageSent;
     $('chatHelp').textContent = '公式LINEから、ご希望の日程などをお送りいただけます。';
